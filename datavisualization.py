@@ -42,7 +42,8 @@ def data_visualization():
     fig = ff.create_annotated_heatmap(z,x=y,y=y,annotation_text=z_text,colorscale=px.colors.sequential.Cividis_r,showscale=True)
     fig.update_layout(template='plotly_dark')
     # fig.show()
-    fig.write_image("img.jpg")
+    pio.write_image(fig, 'img.jpg', scale=6, width=1080, height=1080)
+    #fig.write_image("img.jpg")
     # a.append(fig)
     
     return data
