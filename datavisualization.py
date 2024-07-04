@@ -14,7 +14,7 @@ from PIL import Image
 a =[]
 data = data_preprocess()
 def data_visualization():
-    # data.drop(['OTI_A','OTI_T','WTI'], axis=1,inplace=True)
+    data.drop(['LOCATION','Type of clients','Criticality from previous study','Electric power not supplied EENS [kWh] ','Type of installation','Air network','SELF-PROTECTION','Air network','km of network LT:'], axis=1,inplace=True)
     col=list(data.columns)
     col.remove("Burned transformers")
     print(col)
